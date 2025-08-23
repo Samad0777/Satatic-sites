@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(34, 34, 34, 0.692); /* Isko 0.4 se 0.5 ya 0.6 karo */
+  z-index: 1;
+}
+
+.card-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.85), transparent);
+  z-index: 5;
+}
+html {
+      scroll-behavior: smooth;
+    }
