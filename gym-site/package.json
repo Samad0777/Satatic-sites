@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.12",
+    "tailwindcss": "^4.1.12"
+  },
+  "name": "gym-site",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "build": "tailwindcss -i ./public/input.css -o ./public/output.css --minify",
+  "watch": "tailwindcss -i ./public/input.css -o ./public/output.css --watch"
+  },
+
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./output.css" />
+    <title>Gym-site</title>
+
+    <!-- swiper.js and font-awesome googlefont cdn links -->
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- swiper.js and font-awesome googlefont cdn links ended -->
+  </head>
+  <body class="bg-gray-900">
+    <!-- header section started  -->
+
+    <header class="relative h-screen">
+      <div class="swiper h-full">
+        <div class="swiper-wrapper">
+          <div
+            class="swiper-slide bg-[url('./images/hero1.jpg')] bg-cover bg-center"
+          >
+            <div
+              class="absolute inset-0 bg-black/60 flex items-center justify-center text-white text-center"
+            >
+              <div class="">
+                <p class="font-semibold uppercase tracking-[0.2em]">
+                  Shape Your Body
+                </p>
+                <h1
+                  class="text-4xl md:text-9xl font-extrabold uppercase mt-2 font-anton tracking-wider"
+                >
+                  Be Strong
+                </h1>
+
+                <button
+                  class="cursor-pointer active:scale-95 mt-8 px-8 py-3 bg-orange-500 text-white font-bold uppercase hover:bg-orange-600 transition-colors"
+                >
+                  Get Info
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="swiper-slide bg-[url('./images/hero2.jpg')] bg-cover bg-center"
+          >
+            <div
+              class="absolute inset-0 bg-black/60 flex items-center justify-center text-white text-center"
+            >
+              <div>
+                <p class="font-semibold uppercase tracking-[0.2em]">Push Your Limits</p>
+                <h1 class="text-4xl md:text-9xl font-extrabold uppercase mt-2 font-anton tracking-wider">
+                  Training Hard
+                </h1>
+                <button
+                  class="cursor-pointer active:scale-95 mt-8 px-8 py-3 bg-orange-500 text-white font-bold uppercase hover:bg-orange-600 transition-colors"
+                >
+                  Get Info
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev text-orange-500"></div>
+        <div class="swiper-button-next text-orange-500"></div>
+      </div>
+
+      <!-- navbar section started -->
+
+      <nav class="absolute top-0 left-0 right-0 z-20 bg-transparent text-white">
+        <div class="container mx-auto flex items-center justify-between p-5">
+          <a href="#" class="text-3xl font-bold text-orange-500">GymSite</a>
+
+          <ul class="hidden md:flex space-x-6 text-lg">
+            <li>
+              <a
+                href="#"
+                class="hover:text-orange-500 transition-colors font-bold"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="hover:text-orange-500 transition-colors font-bold"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="hover:text-orange-500 transition-colors font-bold"
+                >Services</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="hover:text-orange-500 transition-colors font-bold"
+                >Contact</a
+              >
+            </li>
+          </ul>
+
+          <div id="menu-buttons" class="md:hidden text-2xl">
+            <button id="open-menu">
+              <i class="fa-solid fa-bars"></i>
+            </button>
+            <button id="close-menu" class="hidden">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+
+        </div>
+      </nav>
+
+      <div
+        id="mobile-menu"
+        class="fixed p-4 top-0 left-0 h-full w-3/4 max-w-sm z-50 bg-[#191717]
+         text-white transform -translate-x-full transition-transform duration-300 ease-in-out"
+      >
+        <p class="py-4 px-4">
+          <a href="#" class="text-2xl font-bold text-orange-500">GymSite</a>
+        </p>
+
+        <ul class="my-8 space-y-4 text-center">
+          <li>
+            <a href="#home" class="text-2xl hover:text-amber-500">Home</a>
+          </li>
+          <li>
+            <a href="#about" class="text-2xl hover:text-amber-500">About Us</a>
+          </li>
+          <li>
+            <a href="#menu" class="text-2xl hover:text-amber-500">Menu</a>
+          </li>
+          <li>
+            <a href="#contact" class="text-2xl hover:text-amber-500"
+              >Contact Us</a
+            >
+          </li>
+        </ul>
+
+        <div class="absolute bottom-0 left-0 w-full p-4 text-center">
+          <p>&copy; 2025 GymSite. All rights reserved.</p>
+      </div>
+
+      <!-- navbar section ended -->
+    </header>
+
+    <!-- header section ended  -->
+
+
+
+    <!-- Why choose us section -->
+
+    <section class="why-choose-us bg-[#191717cb] py-20 px-4">
+    <div class="container mx-auto text-center text-white">
+
+        <p class="text-sm font-semibold text-orange-500 uppercase tracking-wider">Why Choose Us</p>
+        <h2 class="mt-2 text-4xl font-bold font-anton uppercase tracking-wider">Push Your Limits Forward</h2>
+
+        <div class="mt-12 grid md:grid-cols-3 gap-12">
+
+            <div class="feature-card">
+                <div class="text-5xl text-orange-500">
+                    <i class="fa-solid fa-dumbbell"></i>
+                </div>
+                <h3 class="mt-4 text-2xl font-bold">Expert Trainers</h3>
+                <p class="mt-2 text-gray-400">
+                    Our trainers are certified professionals who will guide you through every step of your fitness journey.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <div class="text-5xl text-orange-500">
+                    <i class="fa-solid fa-heart-pulse"></i>
+                </div>
+                <h3 class="mt-4 text-2xl font-bold">State-of-the-Art Equipment</h3>
+                <p class="mt-2 text-gray-400">
+                    We provide the latest fitness equipment to ensure you have the best workout experience.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <div class="text-5xl text-orange-500">
+                    <i class="fa-solid fa-users"></i>
+                </div>
+                <h3 class="mt-4 text-2xl font-bold">Community Support</h3>
+                <p class="mt-2 text-gray-400">
+                    Join a community of like-minded individuals who motivate and support each other.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+    <!-- Why choose us section ended -->
+
+
+    <!-- our classes section started  -->
+
+  <section class="our-classes bg-[#1f1e1ecb] px-4">
+    <div class="container mx-auto text-center text-white py-20 px-4">
+        <p class="text-sm font-semibold text-orange-500 uppercase tracking-wider">Our Classes</p>
+        <h2 class="mt-2 text-4xl font-bold font-anton uppercase md:tracking-wider">Explore Our Popular Classes</h2>
+
+        <div class="mt-12 grid md:grid-cols-3 gap-12">
+
+            <div class="class-card flex flex-col items-center bg-[#262424cb] p-6 rounded-lg">
+                <img src="./images/card1.jpg" alt="Yoga Class" class="w-full h-48 object-cover rounded-lg">
+                <h3 class="mt-4 text-xl font-bold text-orange-500 uppercase">Strength</h3>
+                <p class="mt-2 text-gray-400">
+                    Build muscle and increase strength with our comprehensive strength training programs.
+                </p>
+            </div>
+
+            <div class="class-card flex flex-col items-center bg-[#262424cb] p-6 rounded-lg">
+                <img src="./images/card2.jpg" alt="Cardio Class" class="w-full h-48 object-cover rounded-lg">
+                <h3 class="mt-4 text-xl font-bold text-orange-500 uppercase">Cardio</h3>
+                <p class="mt-2 text-gray-400">
+                    Improve cardiovascular health and endurance with our high-energy cardio classes.
+                </p>
+            </div>
+
+            <div class="class-card flex flex-col items-center bg-[#262424cb] p-6 rounded-lg">
+                <img src="./images/card3.jpg" alt="Yoga Class" class="w-full h-48 object-cover rounded-lg">
+                <h3 class="mt-4 text-xl font-bold text-orange-500 uppercase">Yoga</h3>
+                <p class="mt-2 text-gray-400">
+                    Improve flexibility and reduce stress with our expert-led yoga classes.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+      <!-- our classes section ended -->
+
+
+  </body>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="./script.js"></script>
+</html>
