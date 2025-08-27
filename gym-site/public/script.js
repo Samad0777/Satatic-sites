@@ -14,7 +14,7 @@ const swiper = new Swiper('.swiper', {
   },
 
   autoplay: {
-    delay: 3000,
+    delay: 5000,
     disableOnInteraction: false,
   },
 });
@@ -108,10 +108,25 @@ form.addEventListener('submit', function(event) {
   }
 
 
+  
+  
   // --- Final Decision ---
-
+  
   // Agar form valid nahi hai, to usko submit hone se roko
   if (!isValid) {
     event.preventDefault(); // This stops the form from submitting
+  } else {
+    // Disable the submit button and change its text to "Sending..."
+    const submitButton = form.querySelector('button[type="submit"]');
+    submitButton.disabled = true;
+    submitButton.textContent = 'Sending...';
   }
+});
+
+// form reset after submission
+
+form.addEventListener('submit', () => {
+  setTimeout(() => {
+    form.reset();
+  }, 1000);
 });
