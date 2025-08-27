@@ -57,76 +57,69 @@ mobileMenuLinks.forEach(link => {
 
 // form section 
 
-const form = document.querySelector('#contact-form');
-const nameInput = document.getElementById('name');
-const emailInput = document.getElementById('email');
-const messageInput = document.getElementById('message');
 
-const nameError = document.getElementById('name-error');
-const emailError = document.getElementById('email-error');
-const messageError = document.getElementById('message-error');
+const form = document.getElementById('contact-form'); // Use ID for better performance
 
-form.addEventListener('submit', function(event) {
-  // Assume form is valid initially
-  let isValid = true;
+if (form) { // Check if the form exists on the page
+  const submitButton = form.querySelector('button[type="submit"]');
+  const nameInput = form.querySelector('#name');
+  const emailInput = form.querySelector('#email');
+  const messageInput = form.querySelector('#message');
 
-  // Clear previous errors
-  nameError.textContent = '';
-  nameError.classList.add('hidden');
-  emailError.textContent = '';
-  emailError.classList.add('hidden');
-  messageError.textContent = '';
-  messageError.classList.add('hidden');
+  const nameError = form.querySelector('#name-error');
+  const emailError = form.querySelector('#email-error');
+  const messageError = form.querySelector('#message-error');
 
-  // --- Validation Checks ---
+  form.addEventListener('submit', function(event) {
+    // 1. Pehle to saari purani galtiyan saaf karo
+    nameError.classList.add('hidden');
+    emailError.classList.add('hidden');
+    messageError.classList.add('hidden');
 
-  // 1. Name Check
-  if (nameInput.value.trim() === '') {
-    nameError.textContent = 'Please enter your name.';
-    nameError.classList.remove('hidden');
-    isValid = false;
-  }
+    // 2. Ab check karo ki form sahi hai ya nahi
+    let isValid = true;
+    
+    // Name check
+    if (nameInput.value.trim() === '') {
+        nameError.textContent = 'Please enter your name.';
+        nameError.classList.remove('hidden');
+        isValid = false;
+    }
 
-  // 2. Email Check (IMPROVED)
-  const emailValue = emailInput.value.trim();
-  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (emailValue === '') {
-    emailError.textContent = 'Please enter your email address.';
-    emailError.classList.remove('hidden');
-    isValid = false;
-  } else if (!emailPattern.test(emailValue)) {
-    emailError.textContent = 'Please enter a valid email format (e.g., name@example.com).';
-    emailError.classList.remove('hidden');
-    isValid = false;
-  }
+    // Email check
+    const emailValue = emailInput.value.trim();
+    if (emailValue === '') {
+        emailError.textContent = 'Please enter your email address.';
+        emailError.classList.remove('hidden');
+        isValid = false;
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailValue)) {
+        emailError.textContent = 'Please enter a valid email format.';
+        emailError.classList.remove('hidden');
+        isValid = false;
+    }
 
-  // 3. Message Check
-  if (messageInput.value.trim() === '') {
-    messageError.textContent = 'Please enter a message.';
-    messageError.classList.remove('hidden');
-    isValid = false;
-  }
+    // Message check
+    if (messageInput.value.trim() === '') {
+        messageError.textContent = 'Please enter a message.';
+        messageError.classList.remove('hidden');
+        isValid = false;
+    }
 
+    // 3. Aakhri Faisla
+    if (!isValid) {
+      event.preventDefault(); // Agar form galat hai, to submit hone se roko
+    } else {
+      // Agar form sahi hai, to button ko disable karo
+      submitButton.disabled = true;
+      submitButton.textContent = 'Sending...';
 
-  
-  
-  // --- Final Decision ---
-  
-  // Agar form valid nahi hai, to usko submit hone se roko
-  if (!isValid) {
-    event.preventDefault(); // This stops the form from submitting
-  } else {
-    // Disable the submit button and change its text to "Sending..."
-    const submitButton = form.querySelector('button[type="submit"]');
-    submitButton.disabled = true;
-    submitButton.textContent = 'Sending...';
-  }
-});
+      // Aur 2 second baad, form reset karo aur button theek karo
+      setTimeout(() => {
+        form.reset();
+        submitButton.disabled = false;
+        submitButton.textContent = 'Send Message';
+      }, 2000);
+    }
+  });
+}
 
-// form reset after submission
-
-form.addEventListener('submit', () => {
-  setTimeout(() => {
-    form.reset();
-  }, 1000);
-});
