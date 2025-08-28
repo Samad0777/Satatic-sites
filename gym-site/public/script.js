@@ -105,15 +105,15 @@ if (form) { // Check if the form exists on the page
         isValid = false;
     }
 
-    // 3. Aakhri Faisla
+    
     if (!isValid) {
-      event.preventDefault(); // Agar form galat hai, to submit hone se roko
+      event.preventDefault(); 
     } else {
-      // Agar form sahi hai, to button ko disable karo
+      
       submitButton.disabled = true;
       submitButton.textContent = 'Sending...';
 
-      // Aur 2 second baad, form reset karo aur button theek karo
+      
       setTimeout(() => {
         form.reset();
         submitButton.disabled = false;
