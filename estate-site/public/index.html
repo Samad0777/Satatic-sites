@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./output.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>DreamHome</title>
+</head>
+<body>
+
+  <!-- header section starts here  -->
+
+
+    <header id="home"
+      class="relative h-[100vh] bg-[url(./images/home4.jpg)] bg-cover bg-fixed bg-no-repeat"
+    >
+      <!-- navbar desktop section  -->
+
+      <nav
+        class="fixed top-0 left-0 right-0 z-50 p-4 flex items-center justify-between text-white"
+      >
+        <!-- <div class="container flex items-center justify-between border"> -->
+          <div class="logo">
+            <h1 class="text-lg md:text-2xl font-extrabold uppercase mt-2 font-anton tracking-wider">
+              DreamHome
+            </h1>
+          </div>
+
+          <ul class="hidden lg:flex items-center m-auto bg-black/25 backdrop-blur-sm md:py-4 px-6 lg:px-16 rounded-2xl space-x-6">
+            <li><a href="#home" class="text-lg hover:bg-black/35 rounded-lg px-4 py-1">Home</a></li>
+            <li><a href="#about" class=" text-lg hover:border-none hover:bg-black/35 rounded-lg px-4 py-1">About Us</a></li>
+            <li><a href="#menu" class=" text-lg hover:border-none hover:bg-black/35 rounded-lg px-4 py-1">Menu</a></li>
+            <li><a href="#properties" class=" text-lg hover:border-none hover:bg-black/35 rounded-lg px-4 py-1">Properties</a></li>
+          </ul>
+          
+          <ul class="lg:flex items-center space-x-2 hidden">
+            <li><a href="#faq" class="text-md rounded-lg px-4 py-1">FAQ</a></li>
+            <li><a href="#contact" class="text-md rounded-lg px-4 py-1">Contact Us</a></li>
+          </ul>
+
+          <div id="menu-buttons" class="lg:hidden text-2xl">
+            <button id="open-menu">
+              <i class="fa-solid fa-bars"></i>
+            </button>
+            <button id="close-menu" class="hidden">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+        </div>
+      </nav>
+      <div
+        id="mobile-menu"
+        class="fixed top-0 left-0 h-full w-3/4 max-w-sm z-40 bg-black/35 backdrop-blur-sm text-white transform -translate-x-full transition-transform duration-300 ease-in-out"
+      >
+        <ul class="p-8 mt-16 space-y-6 text-center">
+          <li>
+            <a href="#home" class="text-xl hover:text-amber-500">Home</a>
+          </li>
+          <li>
+            <a href="#about" class="text-xl hover:text-amber-500">About Us</a>
+          </li>
+          <li>
+            <a href="#menu" class="text-xl hover:text-amber-500">Menu</a>
+          </li>
+          <li>
+            <a href="#contact" class="text-xl hover:text-amber-500"
+              >Contact Us</a
+            >
+          </li>
+        </ul>
+
+        <div class="absolute bottom-0 left-0 w-full p-4 text-center">
+          <p class="text-sm">&copy; 2025 DreamHome. All rights reserved.</p>
+      </div>
+
+      </div>
+
+      <div
+        class="intro-section w-[80vw] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white z-10"
+      >
+        <h1
+          class="text-4xl md:text-6xl font-bold md:py-5 sm:p-4 md:tracking-widest"
+        >
+          Exceptional Living Starts Here
+        </h1>
+        <p class="text-md py-4 md:tracking-widest">
+          Experience timeless architecture exclusive locations, and luxury
+          home designed to inspire your lifestyle.
+        </p>
+        <div class="buttons-sec my-5 flex justify-center items-center gap-10">
+          <button
+            class="border p-2.5 cursor-pointer transition-colors
+             duration-300 transform hover:bg-gray-300
+              hover:border-gray-200 hover:scale-105 hover:text-black active:scale-95 rounded-2xl"
+          >
+            Get started <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      <!-- </div> -->
+    </header>
+
+
+
+    <!-- header section ends here  -->
+
+
+</body>
+<script src="./script.js"></script>
+</html>
