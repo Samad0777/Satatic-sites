@@ -3,11 +3,11 @@
 header::before {
   content: '';
   position: absolute;
-  top: 0;
+  top: 10;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(42, 42, 42, 0.692); /* Isko 0.4 se 0.5 ya 0.6 karo */
+  background-color: rgba(41, 40, 40, 0.542); 
   z-index: 1;
 }
 

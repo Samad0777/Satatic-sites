@@ -28,7 +28,7 @@
 
 
     <header id="home"
-      class="relative h-[100vh] bg-[url(./images/home4.jpg)] bg-center bg-cover bg-fixed bg-no-repeat
+      class="relative h-[100vh] bg-[url(./images/home4.jpg)] bg-cover bg-fixed bg-no-repeat
        [mask-image:linear-gradient(to_bottom,white_80%,transparent)]"
     >
       <!-- navbar desktop section  -->
@@ -91,20 +91,24 @@
       </div>
 
       </div>
-
+<div class="absolute inset-0 bg-black opacity-40"></div> 
       <div class="intro-section absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white z-10">
 
     <h1 class="text-4xl text-center md:text-5xl font-bold tracking-widest">
         Exceptional Living Starts Here
     </h1>
 
-    <p class="text-lg font-light text-gray-300 mt-4 max-w-2xl mx-auto tracking-wide">
+    <p class="hidden md:block text-lg font-light text-center text-gray-300 mt-4 max-w-2xl mx-auto tracking-wide">
         Experience timeless architecture, exclusive locations, and luxury home designed to inspire your lifestyle.
+    </p>
+
+    <p class="block md:hidden text-lg font-light text-center text-gray-300 mt-4 max-w-2xl mx-auto tracking-wide">
+        Luxury homes. Exclusive locations. Inspired living.
     </p>
 
     <div class="mt-8">
         <a href="#properties" 
-           class="inline-block px-8 py-3 bg-white text-gray-900 font-semibold uppercase tracking-wider rounded-full 
+           class="inline-block px-8 py-3 bg-[#ECF0F4] text-gray-900 font-semibold uppercase tracking-wider rounded-full 
                   hover:bg-gray-200 transition-colors transform hover:scale-105">
             Get Started <i class="fa-solid fa-arrow-right ml-2"></i>
         </a>
@@ -117,6 +121,41 @@
 
 
     <!-- header section ends here  -->
+
+
+    <!-- about us section starts here  -->
+
+    <section id="about" class="py-16 md:py-24 bg-white overflow-hidden">
+    <div class="container mx-auto px-4">
+        
+        <div class="relative grid grid-cols-1 lg:grid-cols-2 lg:gap-8 items-center">
+            
+            <div class="text-left z-10  sm:mx-20 lg:mx-0">
+                <h2 class="text-center text-3xl md:text-5xl font-bold text-gray-800 leading-tight">
+                    Your Home, Your Legacy, Designed Forever
+                </h2>
+                <p class="mt-6 text-gray-600 max-w-lg leading-relaxed">
+                  More than just a residence, Haven is a reflection of your 
+                  individuality — thoughtfully designed, expertly crafted, and created to inspire for generations to come.
+                </p>
+
+                <div class="mt-8 grid grid-cols-2 gap-4 max-w-md">
+                    <img src="./images/sam1.jpg" alt="Villa view 1" class="rounded-lg shadow-md w-full h-auto object-cover">
+                    <img src="./images/sam2.jpg" alt="Villa view 2" class="rounded-lg shadow-md w-full h-auto object-cover">
+                </div>
+            </div>
+
+            <div class="mt-10 lg:mt-0">
+                 <img src="./images/right-hs1.png" alt="Main villa" 
+                      class="w-full lg:absolute lg:bottom-[-10rem] lg:right-[-5rem] lg:w-[60%] lg:max-w-none">
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+    <!-- about us section ends here  -->
 
 
 </body>
