@@ -3,11 +3,11 @@
 header::before {
   content: '';
   position: absolute;
-  top: 10;
+  top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(41, 40, 40, 0.542); 
+  background-color: rgba(52, 51, 51, 0.542); 
   z-index: 1;
 }
 
