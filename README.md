@@ -1,5 +1,5 @@
 # Static webpages
-A personal portfolio of frontend Static webpages.
+ frontend Static webpages.
  Showcasing skills in HTML, CSS, Tailwind CSS, and vanilla JavaScript and responsive design.
 
 1. Cafe-site
